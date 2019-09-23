@@ -40,4 +40,4 @@ except KeyboardInterrupt:
     print("Exception: KeyboardInterrupt")
 
 finally:
-gpio.cleanup()
+    gpio.cleanup()
