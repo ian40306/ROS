@@ -59,4 +59,4 @@ if __name__ == '__main__':
             break
         else:
             rospy.Subscriber("pub_teleop", String, callback)
-rospy.spin()
+            rospy.spin()
