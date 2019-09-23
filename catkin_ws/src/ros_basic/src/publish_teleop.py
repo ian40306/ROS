@@ -76,4 +76,4 @@ if __name__ == '__main__':
 
     except rospy.ROSInterruptException:
         pass
-termios.tcsetattr(sys.stdin, termios.TCSADRAIN, settings)
+    termios.tcsetattr(sys.stdin, termios.TCSADRAIN, settings)
