@@ -10,7 +10,7 @@ sudo sh -c 'echo "deb [arch=amd64,arm64] http://packages.ros.org/ros2/ubuntu `ls
 wget https://github.com/ros2/ros2/releases/download/release-crystal-20190820/ros2-crystal-20190820-linux-bionic-amd64.tar.bz2
 mkdir -p ~/ros2_install
 cd ~/ros2_install
-tar xf ~/ros2-crystal-20190820-linux-bionic-amd64.tar.bz2
+tar xf ~/ROS/ros2-crystal-20190820-linux-bionic-amd64.tar.bz2
 sudo apt install -y python-rosdep
 rosdep init
 rosdep update
