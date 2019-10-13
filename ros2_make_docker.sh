@@ -17,7 +17,7 @@ sudo sh -c 'echo "deb [arch=amd64,arm64] http://packages.ros.org/ros2/ubuntu `ls
 export CHOOSE_ROS_DISTRO=crystal
 sudo apt update
 sudo apt install ros-$CHOOSE_ROS_DISTRO-desktop -y
-sudo apt install ros-$CHOOSE_ROS_DISTRO-ros-base
+#sudo apt install ros-$CHOOSE_ROS_DISTRO-ros-base
 sudo apt install python3-argcomplete
 source /opt/ros/$CHOOSE_ROS_DISTRO/setup.bash
 echo "source /opt/ros/$CHOOSE_ROS_DISTRO/setup.bash" >> ~/.bashrc
