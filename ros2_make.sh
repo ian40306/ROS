@@ -53,7 +53,6 @@ mkdir -p ~/ros2_example && cd ~/ros2_example
 tar xf ~/Downloads/ros2-dashing-20190910-linux-bionic-amd64.tar.bz2
 sudo apt-get update && sudo apt-get install vim -y
 echo ". ~/ros2_example/ros2-linux/setup.bash" >> ~/.bashrc
-cd
 mkdir -p turtlesim/src && cd turtlesim/src
 git clone https://github.com/zhangrelay/ros2_tutorials.git
 cd ~/ros2_example/turtlesim
