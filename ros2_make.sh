@@ -7,7 +7,7 @@ sudo apt update && sudo apt install curl gnupg2 lsb-release
 curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
 sudo sh -c 'echo "deb [arch=amd64,arm64] http://packages.ros.org/ros2/ubuntu `lsb_release -cs` main" > /etc/apt/sources.list.d/ros2-latest.list'
 sudo apt update
-sudo apt install ros-dashing-desktop -y
+sudo apt install ros-dashing-desktop
 sudo apt install python3-argcomplete
 source /opt/ros/dashing/setup.bash
 echo "source /opt/ros/dashing/setup.bash" >> ~/.bashrc
@@ -47,11 +47,13 @@ sudo rosdep init
 rosdep update
 rosdep install --from-paths src --ignore-src --rosdistro dashing -y --skip-keys "console_bridge fastcdr fastrtps libopensplice67 libopensplice69 rti-connext-dds-5.3.1 urdfdom_headers"
 python3 -m pip install -U lark-parser
+cd ~/Downloads
 wget https://github.com/ros2/ros2/releases/download/release-dashing-20190910/ros2-dashing-20190910-linux-bionic-amd64.tar.bz2 
 mkdir -p ~/ros2_install && cd ~/ros2_install
-tar xf ~/ros2-dashing-20190910-linux-bionic-amd64.tar.bz2
+tar xf ~/Downloads/ros2-dashing-20190910-linux-bionic-amd64.tar.bz2
 sudo apt-get update && sudo apt-get install vim -y
 echo ". ~/ros2_install/ros2-linux/setup.bash" >> ~/.bashrc
+cd
 mkdir -p ros2_turtlesim_example/src && cd ros2_turtlesim_example/src
 git clone https://github.com/zhangrelay/ros2_tutorials.git
 cd ..
