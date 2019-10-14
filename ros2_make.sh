@@ -49,14 +49,14 @@ rosdep install --from-paths src --ignore-src --rosdistro dashing -y --skip-keys 
 python3 -m pip install -U lark-parser
 cd ~/Downloads
 wget https://github.com/ros2/ros2/releases/download/release-dashing-20190910/ros2-dashing-20190910-linux-bionic-amd64.tar.bz2 
-mkdir -p ~/ros2_install && cd ~/ros2_install
+mkdir -p ~/ros2_example && cd ~/ros2_example
 tar xf ~/Downloads/ros2-dashing-20190910-linux-bionic-amd64.tar.bz2
 sudo apt-get update && sudo apt-get install vim -y
-echo ". ~/ros2_install/ros2-linux/setup.bash" >> ~/.bashrc
+echo ". ~/ros2_example/ros2-linux/setup.bash" >> ~/.bashrc
 cd
-mkdir -p ros2_turtlesim_example/src && cd ros2_turtlesim_example/src
+mkdir -p turtlesim/src && cd turtlesim/src
 git clone https://github.com/zhangrelay/ros2_tutorials.git
-cd ..
+cd ~/ros2_example/turtlesim
 colcon build
-echo "source ~/ros2_turtlesim_example/install/local_setup.bash" >> ~/.bashrc
-echo "source ~/ros2_turtlesim_example/install/setup.bash" >> ~/.bashrc
+echo "source ~/ros2_example/turtlesim/install/local_setup.bash" >> ~/.bashrc
+echo "source ~/ros2_example/turtlesim/install/setup.bash" >> ~/.bashrc
